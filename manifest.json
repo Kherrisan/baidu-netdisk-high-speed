@@ -1,0 +1,39 @@
+{
+  "manifest_version": 2,
+  "homepage_url": "https://github.com/b3log/baidu-netdisk-high-speed",
+  "browser_action": {
+    "default_title": "百度网盘不限速下载",
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "128": "logo/logo.png"
+  },
+  "content_scripts": [
+    {
+      "run_at": "document_start",
+      "matches": [
+        "*://pan.baidu.com/*",
+        "*://yun.baidu.com/*"
+      ],
+      "js": [
+        "core.js"
+      ]
+    }
+  ],
+  "background": {
+    "scripts": [
+      "donate.js",
+      "request.js"
+    ]
+  },
+  "permissions": [
+    "tabs",
+    "clipboardWrite",
+    "webRequest",
+    "webRequestBlocking",
+    "*://pan.baidu.com/*",
+    "*://yun.baidu.com/*"
+  ],
+  "name": "百度网盘不限速下载",
+  "version": "1.0.0"
+}
