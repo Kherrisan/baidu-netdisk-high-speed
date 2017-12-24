@@ -13,6 +13,10 @@
 
 我在他的基础上做了一些完善，提供持续更新！
 
+## 问题支持
+
+* 加入 [Q 群 242561391](http://shang.qq.com/wpa/qunwpa?idkey=981d9282616274abb1752336e21b8036828f715a1c4d0628adcf208f2fd54f3a)
+
 ## 鸣谢
 
 * [百度云大文件下载破解,chrome插件](https://github.com/cloudroc/baidu-nolimit)
