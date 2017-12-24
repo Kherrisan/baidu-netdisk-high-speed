@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "homepage_url": "https://github.com/b3log/baidu-netdisk-high-speed",
   "browser_action": {
-    "default_title": "百度网盘不限速下载",
+    "default_title": "百度网盘高速下载",
     "default_popup": "popup.html"
   },
   "icons": {
@@ -34,6 +34,6 @@
     "*://pan.baidu.com/*",
     "*://yun.baidu.com/*"
   ],
-  "name": "百度网盘不限速下载",
+  "name": "百度网盘高速下载",
   "version": "1.0.0"
 }
