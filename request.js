@@ -1,6 +1,5 @@
 chrome.webRequest.onBeforeRequest.addListener(
   function (details) {
-    console.log(details);
     const xhr = new XMLHttpRequest();
     xhr.open(details.method, details.url, false);
     if ("POST" === details.method) {
@@ -14,12 +13,11 @@ chrome.webRequest.onBeforeRequest.addListener(
       xhr.send();
     }
     const result = JSON.parse(xhr.responseText);
-    console.log(result);
+
     if (0 !== result.errno) {
       return {cancel: false};
     }
 
-    console.log(result.list);
     var url = "";
     if (result.dlink) {
       if (result.dlink instanceof Array) {
@@ -27,8 +25,11 @@ chrome.webRequest.onBeforeRequest.addListener(
       } else {
         url = result.dlink;
       }
-    } else if (result.list) {
-      url = result.list[0].dlink;
+    } else if (result.list && result.list instanceof Array) {
+        url = result.list[0].dlink;
+    }
+    if(url === '' || !url) {
+      return {cancel: false};
     }
 
     chrome.tabs.create({
