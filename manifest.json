@@ -33,7 +33,8 @@
     "webRequest",
     "webRequestBlocking",
     "*://pan.baidu.com/*",
-    "*://yun.baidu.com/*"
+    "*://yun.baidu.com/*",
+    "*://*.baidupcs.com/*"
   ],
   "name": "百度网盘高速下载",
   "version": "1.0.0"

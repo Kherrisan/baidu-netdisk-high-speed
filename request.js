@@ -2,6 +2,9 @@ var gCurrentTab = null;
 
 chrome.webRequest.onBeforeRequest.addListener(
   function (details) {
+    if (0 < details.url.indexOf("baidupcs.com/")) {
+      return {cancel: true};
+    }
     if (0 > details.url.indexOf("/api/download") && 0 > details.url.indexOf("/api/sharedownload")) {
       return {cancel: false};
     }
@@ -24,7 +27,7 @@ chrome.webRequest.onBeforeRequest.addListener(
 
     return {cancel: false};
   },
-  {urls: ["*://*.baidu.com/api/*"]},
+  {urls: ["*://*.baidu.com/api/*", "*://*.baidupcs.com/*"]},
   ["blocking", "requestBody"]
 );
 
@@ -82,10 +85,4 @@ chrome.debugger.onEvent.addListener(function (source, method, params) {
         });
     }
   }
-);
-
-chrome.webRequest.onResponseStarted.addListener(function (details) {
-    console.log(details);
-  },
-  {urls: ["*://*.baidu.com/api/sharedownload*", "*://*.baidu.com/api/download*"]}
 );
