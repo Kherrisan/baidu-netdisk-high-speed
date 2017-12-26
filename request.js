@@ -2,7 +2,7 @@ var gCurrentTab = null;
 
 chrome.webRequest.onBeforeRequest.addListener(
   function (details) {
-    if (0 < details.url.indexOf("baidupcs.com/")) {
+    if (0 <= details.url.indexOf("baidupcs.com/") && 0 <= details.url.indexOf("sign=")) {
       return {cancel: true};
     }
     if (0 > details.url.indexOf("/api/download") && 0 > details.url.indexOf("/api/sharedownload")) {
@@ -52,21 +52,21 @@ chrome.debugger.onEvent.addListener(function (source, method, params) {
             return;
           }
 
-          var url = "";
+          var dlink = "";
           if (result.dlink) {
             if (result.dlink instanceof Array) {
-              url = result.dlink[0].dlink;
+              dlink = result.dlink[0].dlink;
             } else {
-              url = result.dlink;
+              dlink = result.dlink;
             }
           } else if (result.list && result.list instanceof Array) {
-            url = result.list[0].dlink;
+            dlink = result.list[0].dlink;
           }
-          if (url === '' || !url) {
+          if ("" === dlink) {
             return {cancel: false};
           }
 
-          console.log("got dlink: ", url)
+          console.log("got dlink: ", dlink)
           chrome.debugger.detach(source);
           gCurrentTab = null;
 
@@ -78,7 +78,7 @@ chrome.debugger.onEvent.addListener(function (source, method, params) {
             chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab) {
               if (changeInfo.status == "complete" && tabId == selfTabId) {
                 var tabs = chrome.extension.getViews({type: "tab"});
-                tabs[0].setURL(url);
+                tabs[0].setURL(dlink);
               }
             });
           });
