@@ -22,7 +22,6 @@
   ],
   "background": {
     "scripts": [
-      "donate.js",
       "request.js"
     ]
   },
@@ -37,5 +36,6 @@
     "*://*.baidupcs.com/*"
   ],
   "name": "百度网盘高速下载",
-  "version": "1.0.0"
+  "description": "安装成功后，请重新打开或者刷新百度网盘网页，然后再点击下载即可获取百度网盘下载直链，将此链接复制到迅雷即可！",
+  "version": "1.1.0"
 }

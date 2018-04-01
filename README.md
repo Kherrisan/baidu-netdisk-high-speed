@@ -5,7 +5,7 @@
 ## 安装
 
 1. [下载](http://img.hacpai.com/baidu-netdisk-high-speed.zip) zip 包解压
-2. 在 Chrome 地址栏输入 `chrome://extensions/` 以打开扩展程序管理页面
+2. 在 Chrome 地址栏输入 `chrome://extensions` 以打开扩展程序管理页面
 3. 顶部勾选“开发者模式”，再点击“加载已解压的扩展程序...”，路径为刚才的解压目录
 
 ![imagepng](https://img.hacpai.com/file/2017/12/3676a3da1cd24991b242a62559f9ba05_image.png)
@@ -27,16 +27,11 @@
 * 通过调试器获取请求的响应数据，提取直链
 * 阻止自动下载
 
-## 贡献
+## 反馈
 
-### 讨论区
-
-* [Q 群 242561391](https://shang.qq.com/wpa/qunwpa?idkey=981d9282616274abb1752336e21b8036828f715a1c4d0628adcf208f2fd54f3a)
+* [Q 群 242561391](http://shang.qq.com/wpa/qunwpa?idkey=981d9282616274abb1752336e21b8036828f715a1c4d0628adcf208f2fd54f3a)
 * [社区论坛](https://hacpai.com/article/1514135920272)
-
-### 算力
-
-本插件会占用一点空闲 CPU 进行进行挖矿，收益将用于维持项目运维。原理请参考[使用访问者浏览器挖矿的方法](https://hacpai.com/article/1512269880744)。
+* [项目地址](https://github.com/b3log/baidu-netdisk-high-speed)
 
 ## 鸣谢
 
