@@ -30,3 +30,18 @@ chrome.webRequest.onBeforeRequest.addListener(
   ["blocking", "requestBody"]
 );
 
+chrome.webRequest.onBeforeSendHeaders.addListener(
+  function (details) {
+    for (var i = 0; i < details.requestHeaders.length; i++) {
+      if ('User-Agent' === details.requestHeaders[i].name) {
+        // 强制模拟 Windows 系统，解决苹果系统不能使用的问题
+        details.requestHeaders[i].value = 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36';
+        break;
+      }
+    }
+
+    return {requestHeaders: details.requestHeaders};
+  },
+  {urls: ["*://pan.baidu.com/*", "*://yun.baidu.com/*"]},
+  ['blocking', 'requestHeaders']
+);
