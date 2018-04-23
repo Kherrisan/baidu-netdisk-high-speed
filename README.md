@@ -2,6 +2,8 @@
 
 这是一款获取百度网盘下载直链的[开源](https://github.com/b3log/baidu-netdisk-high-speed) Chrome 插件，获取到直链后你可以使用迅雷下载以达到不限速的目的。
 
+**如果该插件不好使，请直接使用[百度网盘不限速下载器](https://github.com/b3log/baidu-netdisk-downloaderx)试试！**
+
 ## 安装
 
 1. [下载](http://img.hacpai.com/baidu-netdisk-high-speed.zip) zip 包解压
