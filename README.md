@@ -31,7 +31,6 @@
 
 ## 反馈
 
-* [Q 群 242561391](http://shang.qq.com/wpa/qunwpa?idkey=981d9282616274abb1752336e21b8036828f715a1c4d0628adcf208f2fd54f3a)
 * [社区论坛](https://hacpai.com/article/1514135920272)
 * [项目地址](https://github.com/b3log/baidu-netdisk-high-speed)
 
