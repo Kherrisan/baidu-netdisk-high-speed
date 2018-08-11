@@ -1,8 +1,10 @@
+:bulb: **该插件已经停止维护，请使用 [BND](https://github.com/b3log/baidu-netdisk-downloaderx) 进行替代**
+
+----
+
 # 百度网盘高速下载 Chrome 插件
 
 这是一款获取百度网盘下载直链的[开源](https://github.com/b3log/baidu-netdisk-high-speed) Chrome 插件，获取到直链后你可以使用迅雷下载以达到不限速的目的。
-
-**如果该插件不好使，请直接使用[百度网盘不限速下载器](https://github.com/b3log/baidu-netdisk-downloaderx)试试！**
 
 ## 安装
 
@@ -31,8 +33,8 @@
 
 ## 反馈
 
-* [社区论坛](https://hacpai.com/article/1514135920272)
-* [项目地址](https://github.com/b3log/baidu-netdisk-high-speed)
+* [讨论区](https://hacpai.com/article/1514135920272)
+* [报告问题](https://github.com/b3log/baidu-netdisk-high-speed/issues/new)
 
 ## 鸣谢
 
