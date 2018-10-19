@@ -8,7 +8,7 @@
 
 ### 安装
 
-1. [下载](http://img.hacpai.com/baidu-netdisk-high-speed.zip) zip 包解压
+1. [下载](https://github.com/b3log/baidu-netdisk-high-speed/archive/master.zip) zip 包解压
 2. 在 Chrome 地址栏输入 `chrome://extensions` 以打开扩展程序管理页面
 3. 顶部勾选“开发者模式”，再点击“加载已解压的扩展程序...”，路径为刚才的解压目录
 
